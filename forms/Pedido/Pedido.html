@@ -8,62 +8,92 @@
 		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	</head>
 	<body>
-		<div class="fluig-style-guide">
-			<form name="form" role="form">
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title">Realizar Pedido</h3>
-					</div>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+		
+			<div class="panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">Realizar Pedido</h3>
 				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title"><i class="flaticon flaticon-person icon-md" aria-hidden="true"></i>Informações do Cliente</h3>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="form-group col-md-6">
-								<label for="name">Nome</label> 
-								<input type="text" class="form-control" name="name" id="name" />
-							</div>
-							<div class="form-group col-md-6">
-								<label for="telefone">Telefone</label> 
-								<input type="text" class="form-control" name="telefone" id="telefone" />
-							</div>
+			</div>
+			<div class="panel panel-primary">
+			
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="flaticon flaticon-person icon-md" aria-hidden="true"></i>InformaÃ§Ãµes do Cliente</h3>
+				</div>
+				
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="name">Nome</label> 
+							<input type="text" class="form-control" name="name" id="name" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="telefone">Telefone</label> 
+							<input type="text" class="form-control" name="telefone" id="telefone" />
 						</div>
 					</div>
+				</div>				
+			</div>
+			
+			<div class="panel panel-primary">
+			
+				<div class="panel-heading">
+					<h3 class="panel-title">
+					<i class="fluigicon fluigicon-food icon-md" aria-hidden="true"></i> Escolher Pizza:</h3>
 				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title"><i class="flaticon flaticon-pie-chart icon-md" aria-hidden="true"></i>Escolha a pizza</h3>
+			
+			<div class="panel-body">
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="pizza">Pizzas | Ingredientes</label>
+						<select name="pizza" id="pizza" class="form-control" dataset="dsCardapioPizza" datasetkey="nomeDaPizza" datasetvalue="nomeDaPizza"></select>
 					</div>
-					<div class="panel-body">
-						<div class="row">
-							<table class="dataset-table">
-							   <thead>
-							   	<tr>
-								   	<th>Nome</th>
-								   	<th>Descrição</th>
-								   	<th>Preço</th>
-							   	</tr>
-							   </thead>
-							   <tbody>
-
-							   </tbody>
-							</table>
-							<div class="form-group">
-								<label>Tamanho</label>
-								<div class="radio">
-									<label><input type="radio" name="p">P</label>
-									<label><input type="radio" name="m">M</label> 
-									<label><input type="radio" name="g">G</label> 
-									<label><input type="radio" name="gg">GG</label> 
-								</div>
-							</div>
+					<div class="form-group col-md-2">
+							<label for="telefone">PreÃ§o</label> 
+							<select name="preco" id="preco" class="form-control" dataset="dsCardapioPizza" datasetkey="nomeDaPizza" datasetvalue="preco"></select>
+					</div>
+				</div>
+			</div>
+			
+			 <div class="panel panel-danger">
+			    <div class="panel-heading">
+			        <h3 class="panel-title"><i class="flaticon flaticon-monetization-on icon-md" aria-hidden="true"></i> Pagamento</h3>
+			    </div>
+		    <div class="panel-body">
+		    	<div class="row">    	
+			    	<div class="form-group col-md-4">
+			    		<label for="formaDePagamento">Forma de Pagamento</label>
+				    	<div class="radio">
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="debito">DÃ©bito</label>
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="credito">CrÃ©dito</label>
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="dinheiro">Dinheiro</label>
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="pix">PIX</label>    			
+				    	</div>
+			    	</div>
+		    	
+			    	<div class="form-group col-md-4">
+			    		<label for="confirmacaoMotoboy">Pagamento Confirmado</label>
+			    		<div class="radio">
+				    		<label><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="confirmado">Confirmado</label>
+				    		<label><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="naoConfirmado">NÃ£o confirmado</label>
+			    		</div>
+			  	 	</div>
+			  	 	
+			  	 	<div class="form-group col-md-4">
+			  	 		<div class="panel-body">
+				  	 		<label for="valor">Valor</label>		
+							<input type="number" name="valor" id="valor">	
 						</div>
 					</div>
+					
 				</div>
-			</form>
-		</div>
+			  	 	
+	  		</div>
+	    </div>
+			
+		</form>
+	</div>
 	</body>
 	<script type="text/javascript" src="table.js"></script>
 </html>
