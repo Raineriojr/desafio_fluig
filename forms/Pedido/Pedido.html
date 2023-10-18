@@ -23,47 +23,97 @@
 						<div class="row">
 							<div class="form-group col-md-6">
 								<label for="name">Nome</label> 
-								<input type="text" class="form-control" name="name" id="name" />
+								<input type="text" class="form-control" name="name" id="name" placeholder="Nome do cliente"/>
 							</div>
 							<div class="form-group col-md-6">
 								<label for="telefone">Telefone</label> 
-								<input type="text" class="form-control" name="telefone" id="telefone" />
+								<input type="text" class="form-control" name="telefone" id="telefone" mask="(99) 99999-9999" placeholder="(99) 99999-9999"/>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title"><i class="flaticon flaticon-pie-chart icon-md" aria-hidden="true"></i>Escolha a pizza</h3>
+						<h3 class="panel-title">
+							<i class="flaticon flaticon-pie-chart icon-md" aria-hidden="true"></i>Escolha a pizza
+						</h3>
+						<p>Selecione até duas opções</p>
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							<table class="dataset-table">
+							<table class="table">
 							   <thead>
 							   	<tr>
-								   	<th>Nome</th>
+								   	<th>Pizza</th>
 								   	<th>Descrição</th>
-								   	<th>Preço</th>
+								   	<th>Preço - Tamanho P</th>
+								   	<th>Escolha</th>
 							   	</tr>
 							   </thead>
-							   <tbody>
-
-							   </tbody>
+							   <tbody id="dataset-table-body">	</tbody>
 							</table>
-							<div class="form-group">
-								<label>Tamanho</label>
-								<div class="radio">
-									<label><input type="radio" name="p">P</label>
-									<label><input type="radio" name="m">M</label> 
-									<label><input type="radio" name="g">G</label> 
-									<label><input type="radio" name="gg">GG</label> 
-								</div>
-							</div>
 						</div>
+						<hr>
+						<div class="row fs-justify-content-space-between mt-3">
+					        <div class="col-md-6">
+					            <div class="form-group anger">
+					                <label>Tamanho</label>
+					                <div class="radio">
+					                    <label class="fs-md-margin-right"><input id="P" checked="checked" type="radio" name="tamanho" value="P">P</label> 
+					                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="M">M</label>
+					                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="G">G</label>
+					                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="GG">GG</label>
+					                </div>                        
+					            </div>
+					        </div>
+					        <div class="col-md-6 text-right"> 
+					        	<h3>Total</h3>
+					        	<h4>R$ <span id="valor-total">0.00</span></h4>
+					        </div>
+					    </div>
 					</div>
 				</div>
+				
+				<!-- INICIO - FORMA DE PAGAMENTO -->		
+			 	<div class="panel panel-primary">
+				    <div class="panel-heading">
+				        <h3 class="panel-title"><i class="flaticon flaticon-monetization-on icon-md" aria-hidden="true"></i>Pagamento</h3>
+				    </div>
+				    <div class="panel-body">
+				    	<div class="row">    	
+					    	<div class="form-group col-md-6">
+					    		<label for="formaDePagamento">Forma de Pagamento</label>
+						    	<div class="radio">
+						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="debito">Débito</label>
+						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="credito">Crédito</label>
+						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="dinheiro">Dinheiro</label>
+						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="pix">PIX</label>    			
+						    	</div>
+					    	</div>
+				    	
+					    	<div class="form-group col-md-6">
+					    		<label for="confirmacaoMotoboy">Pagamento Confirmado</label>
+					    		<div class="radio">
+						    		<label class="fs-md-margin-right"><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="confirmado">Confirmado</label>
+						    		<label class="fs-md-margin-right"><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="naoConfirmado">Não confirmado</label>
+					    		</div>
+					  	 	</div>
+					  	 	
+					  	 	<!--<div class="form-group col-md-4">
+					  	 		<div class="panel-body">
+						  	 		<label for="valor">Valor</label>		
+									<input type="number" class="form-group" name="valor" id="valor">	
+								</div>
+							</div> -->
+							
+						</div>
+					  	 	
+			  		</div>
+		    	</div>  
+	    		<!-- FIM - FORMA DE PAGAMENTO -->	
 			</form>
 		</div>
 	</body>
 	<script type="text/javascript" src="table.js"></script>
+	<script type="text/javascript" src="calculaTotal.js"></script>
 </html>
