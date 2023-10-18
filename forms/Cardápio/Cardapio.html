@@ -5,6 +5,7 @@
 		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
 	</head>
 	<body>
 		<div class="fluig-style-guide">
@@ -25,14 +26,14 @@
 								<input type="text" class="form-control" name="pizza" id="pizza" placeholder="Nome da pizza" />
 							</div>
 							<div class="form-group col-md-4">
-								<label for="preco">Preço</label> 
-								<input type="number" class="form-control" name="preco" id="preco" placeholder="R$ 0,00"/>
+								<label for="preco">Preço - Tamanho P</label> 
+								<input type="text" class="form-control" name="preco" id="preco" placeholder="R$ 0,00"/>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group col-md-12">
 								<label for="descricao">Descrição</label> 
-								<textarea rows="5" name="descricao" id="descricao" class="form-control"></textarea>
+								<textarea rows="5" name="descricao" id="descricao" class="form-control" placeholder="Descrição..."></textarea>
 							</div>
 						</div>
 					</div>
@@ -40,4 +41,5 @@
 			</form>
 		</div>
 	</body>
+	<script type="text/javascript" src="moedaInput.js"></script>
 </html>
