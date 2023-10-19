@@ -5,124 +5,238 @@
 		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
-		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><!-- nova função teste -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<style>
+				.centerAll {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.fluig-style-guide .table {
+				    width: 98% !important;
+				}
+				.panel-heading {
+					background-color: #ffd129 !important;
+				}
+				.panel-body{
+					background-color: #f3f3f3 !important;
+				}
+				
+		</style>
 	</head>
-	<body>
-	<div class="fluig-style-guide">
-		<form name="form" role="form">
-		
-			<div class="panel">
-				<div class="panel-heading">
-					<h3 class="panel-title">Realizar Pedido</h3>
+<body>
+<div class="fluig-style-guide">
+	<form name="form" role="form">	
+		<div class="page-header">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 containerH1">
+					<h1 class="fs-no-margin fs-ellipsis fs-full-width">
+						<img src="img/icone_pizza.png" class="fluigicon" style="width: 60px;" alt="pizza" />
+						  Pedido de Pizza
+					</h1>
 				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title"><i class="flaticon flaticon-person icon-md" aria-hidden="true"></i>Informações do Cliente</h3>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="form-group col-md-6">
-								<label for="name">Nome</label> 
-								<input type="text" class="form-control" name="name" id="name" placeholder="Nome do cliente"/>
-							</div>
-							<div class="form-group col-md-6">
-								<label for="telefone">Telefone</label> 
-								<input type="text" class="form-control" name="telefone" id="telefone" mask="(99) 99999-9999" placeholder="(99) 99999-9999"/>
-							</div>
-						</div>
-					</div>
-				</div>				
+			</div>
+		</div>
+		<div class="panel panel-default">		
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<img src="img/cliente.png" class="fluigicon" style="width: 30px;" alt="iCliente" />
+					 Informações do Cliente
+				</h3>
 			</div>
 			
-			<div class="panel panel-primary">
-			
-				<div class="panel-heading">
-					<h3 class="panel-title">
-					<i class="fluigicon fluigicon-food icon-md" aria-hidden="true"></i> Escolher Pizza:</h3>
-				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">
-							<i class="flaticon flaticon-pie-chart icon-md" aria-hidden="true"></i>Escolha a pizza
-						</h3>
-						<p>Selecione até duas opções</p>
+
+			<div class="panel-body">
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="name">Nome</label> 
+						<input
+							type="zoom"
+							   id="cadastroCliente"
+							   name="cadastroCliente"
+							   data-zoom="{
+							       'displayKey':'nome',
+							       'datasetId':'dsCadastroCliente',
+							       'placeholder':'Clientes Cadastrados',
+							       'fields':[
+							           {
+							               'field':'nome',
+							               'label':'Nome'
+							           },{
+							               'field':'logradouro',
+							               'label':'Rua',
+							                'standard':'true'
+							            },{
+							                'field':'telefone',
+							                'label':'Telefone'
+							            }
+							        
+							        ]
+							    }"			
+						/>
 					</div>
-					<div class="panel-body">
-						<div class="row">
-							<table class="table">
-							   <thead>
-							   	<tr>
-								   	<th>Pizza</th>
-								   	<th>Descrição</th>
-								   	<th>Preço - Tamanho P</th>
-								   	<th>Escolha</th>
-							   	</tr>
-							   </thead>
-							   <tbody id="dataset-table-body">	</tbody>
-							</table>
+					<div class="form-group col-md-4">
+						<label for="name">Endereço</label> 
+						<input
+							type="zoom"
+							   id="endereco"
+							   name="endereco"
+							   data-zoom="{
+							       'displayKey':'logradouro',
+							       'datasetId':'dsCadastroCliente',
+							       'placeholder':'Endereço do cliente',
+							       'fields':[
+							           {
+							               'field':'nome',
+							               'label':'Nome'
+							           },{
+							               'field':'logradouro',
+							               'label':'Rua',
+							                'standard':'true'
+							            },{
+							                'field':'telefone',
+							                'label':'Telefone'
+							            }
+							        
+							        ]
+							    }"			
+						/>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="name">Telefone</label> 
+						<input
+							type="zoom"
+							   id="telefone"
+							   name="telefone"
+							   data-zoom="{
+							       'displayKey':'telefone',
+							       'datasetId':'dsCadastroCliente',
+							       'placeholder':'Telefone do cliente',
+							       'fields':[
+							           {
+							               'field':'nome',
+							               'label':'Nome'
+							           },{
+							               'field':'logradouro',
+							               'label':'Rua',
+							                'standard':'true'
+							            },{
+							                'field':'telefone',
+							                'label':'Telefone'
+							            }
+							        
+							        ]
+							    }"			
+						/>
+				</div>
+			</div>				
+		</div>
+		
+		<!-- INICIO - ESCOLA DE PIZZA -->
+		
+		<div class="panel panel-default">
+		
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<img src="img/pizza_escolher.png" class="fluigicon" style="width: 30px;" alt="pizza" />
+					 Escolher Pizza: 
+				</h3><br>
+				<p>Pizzas Broto (P) R$25,00  |  Pizza Média (M) R$50,00  |  Pizza Grande (G) R$70,00  | </p>
+			</div>
+		
+		<div class="panel-body">
+			<div class="row">
+				<table class="table">
+				   <thead>
+				   	<tr>
+					   	<th>Pizza</th>
+					   	<th>Descrição</th>
+					   	<th>Preço | Tamanho</th>
+					   	<th>Escolha</th>
+				   	</tr>
+				   </thead>
+				   <tbody id="dataset-table-body"></tbody>
+				</table>
+			</div>	
+			<hr>
+			<div class="row fs-justify-content-space-between mt-3">
+		        <div class="col-md-6">
+		            <div class="form-group anger">
+		                <label>Tamanho</label>
+		                <div class="radio">
+		                    <label class="fs-md-margin-right"><input id="P" checked="checked" type="radio" name="tamanho" value="P">P</label> 
+		                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="M">M</label>
+		                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="G">G</label>
+		                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="GG">GG</label>
+		                </div>                        
+		            </div>
+		        </div>
+		        <div class="col-md-6 text-right"> 
+		        	<h3>Total</h3>
+		        	<h4>R$ <span id="valor-total">0.00</span></h4>
+		        </div>
+		  </div>
+		</div>
+					
+	</div>
+		
+		<!-- INICIO - FORMA DE PAGAMENTO -->		
+			
+		 <div class="panel panel-default">
+		    <div class="panel-heading">
+				<h3 class="panel-title">
+					<img src="img/form_pgto.png" class="fluigicon" style="width: 30px;" alt="iCliente" />
+					  Formas de Pagamento
+				</h3>
+			</div>
+		    <div class="panel-body">
+		    	<div class="row">    	
+			    	<div class="form-group col-md-4">
+			    		<label for="formaDePagamento">Forma de Pagamento</label>
+				    	<div class="radio">
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="debito">Débito</label>
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="credito">Crédito</label>
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="dinheiro">Dinheiro</label>
+				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="pix">PIX</label>    			
+				    	</div>
+			    	</div>
+		    	
+			    	<div class="form-group col-md-4">
+			    		<label for="confirmacaoMotoboy">Pagamento Confirmado</label>
+			    		<div class="radio">
+				    		<label><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="confirmado">Confirmado</label>
+				    		<label><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="naoConfirmado">Não confirmado</label>
+			    		</div>
+			  	 	</div>
+			  	 	
+			  	 	<div class="form-group col-md-4">
+			  	 		<div class="panel-body">
+				  	 		<label for="motoBoy">
+				  	 			<h3 class="panel-title">
+									<img src="img/entrega-rapida.png" class="fluigicon" style="width: 30px;" alt="iCliente" />
+									 Motoboy
+								</h3>
+				  	 		</label>		
+							<select name="motoBoy" id="motoBoy" class="form-control" dataset="dsMotoboy" datasetkey="nome" datasetvalue="nome" ></select>	
 						</div>
-						<hr>
-						<div class="row fs-justify-content-space-between mt-3">
-					        <div class="col-md-6">
-					            <div class="form-group anger">
-					                <label>Tamanho</label>
-					                <div class="radio">
-					                    <label class="fs-md-margin-right"><input id="P" checked="checked" type="radio" name="tamanho" value="P">P</label> 
-					                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="M">M</label>
-					                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="G">G</label>
-					                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="GG">GG</label>
-					                </div>                        
-					            </div>
-					        </div>
-					        <div class="col-md-6 text-right"> 
-					        	<h3>Total</h3>
-					        	<h4>R$ <span id="valor-total">0.00</span></h4>
-					        </div>
-					    </div>
 					</div>
 					
 				</div>
-				
-				<!-- INICIO - FORMA DE PAGAMENTO -->		
-			 	<div class="panel panel-primary">
-				    <div class="panel-heading">
-				        <h3 class="panel-title"><i class="flaticon flaticon-monetization-on icon-md" aria-hidden="true"></i>Pagamento</h3>
-				    </div>
-				    <div class="panel-body">
-				    	<div class="row">    	
-					    	<div class="form-group col-md-6">
-					    		<label for="formaDePagamento">Forma de Pagamento</label>
-						    	<div class="radio">
-						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="debito">Débito</label>
-						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="credito">Crédito</label>
-						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="dinheiro">Dinheiro</label>
-						    		<label class="fs-md-margin-right"><input type="radio" name="formaDePagamento" id="formaDePagamento" value="pix">PIX</label>    			
-						    	</div>
-					    	</div>
-				    	
-					    	<div class="form-group col-md-6">
-					    		<label for="confirmacaoMotoboy">Pagamento Confirmado</label>
-					    		<div class="radio">
-						    		<label class="fs-md-margin-right"><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="confirmado">Confirmado</label>
-						    		<label class="fs-md-margin-right"><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="naoConfirmado">Não confirmado</label>
-					    		</div>
-					  	 	</div>
-					  	 	
-					  	 	<!--<div class="form-group col-md-4">
-					  	 		<div class="panel-body">
-						  	 		<label for="valor">Valor</label>		
-									<input type="number" class="form-group" name="valor" id="valor">	
-								</div>
-							</div> -->
-							
-						</div>
-					  	 	
-			  		</div>
-		    	</div>  
-	    		<!-- FIM - FORMA DE PAGAMENTO -->	
-			</form>
-		</div>
-	</body>
-	<script type="text/javascript" src="table.js"></script>
-	<script type="text/javascript" src="calculaTotal.js"></script>
+			  	 	
+	  		</div>
+    	</div>  
+    
+    <!-- FIM - FORMA DE PAGAMENTO -->	
+    
+  
+	</form>
+</div>
+<script type="text/javascript" src="consultaCliente.js"></script>
+<script type="text/javascript" src="table.js"></script>
+<script type="text/javascript" src="calculaTotal.js"></script>
+	
+</body>
+
 </html>

@@ -42,7 +42,7 @@ $(document).ready(function(){
 	    		
 	    		var soma = 0;
 	    		selectedItems.map(function(item, index) {
-	    			soma += Number(item.preco.split(/\s/)[1]);
+	    			soma = Number(item.preco.split(/\s/)[1]);
 	    			total = soma/selectedItems.length;
 	    			$('#valor-total').text(total.toFixed(2));
 	    		})
@@ -50,7 +50,7 @@ $(document).ready(function(){
 	    }
 	});
 	
-	//pega tamanho selecionado e calcula total
+ //pega tamanho selecionado e calcula total
 	$(document).on('click', '.radio', function(){
 		$('input[name="tamanho"]').change(function() {
 		    
