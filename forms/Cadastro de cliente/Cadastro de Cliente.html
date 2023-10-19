@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<style>
+			.centerAll {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.fluig-style-guide .table {
+			    width: 98% !important;
+			}
+			.panel-heading {
+				background-color: #5f9bce !important;
+			}
+								
+		</style>
+	</head>
+	
+	<body>
+		<div class="fluig-style-guide">
+			<form name="form" role="form">
+			<div class="row">
+				<div class="col-md-12 col-xs-12 containerH1">
+					<h1 class="fs-no-margin fs-ellipsis fs-full-width">
+						<img src="img/cliente_cadast.png" class="fluigicon" style="width: 60px;" alt="client" />
+						  Cadastro de Cliente
+					</h1>
+				</div><br>
+			</div>
+			
+			<!-- Cadastro de cliente -->
+			
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="flaticon flaticon-person icon-md" aria-hidden="true"></i>Dados Pessoais</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+					
+					<!-- <div class="form-group col-md-4">
+							<label for="telefone">Cliente Já cadastrado:</label> 
+							<select name="cliente" id="cliente" class="form-control" dataset="dsCadastroClientes" datasetkey="cliente" datasetvalue="cliente"></select>
+						</div> -->	
+					
+						<div class="form-group col-md-6">
+							<label for="name">Nome:</label> 
+							<input type="text" class="form-control" name="nome" id="nome" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="phone">Telefone:</label> 
+							<input type="text" class="form-control" name="telefone" id="telefone" mask="(00) 00000-0000" placeholder="(00) 00000-0000"/>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+			<!-- fim do Cadastro de cliente -->
+			
+			<!-- Endereço do Cliente -->
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="flaticon flaticon-person-pin-circle icon-md" aria-hidden="true"></i> Endereço</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-2">
+							<label for="cep">CEP</label> 
+							<input type="text" name="cep" id="cep" class="form-control" mask="00000-000" placeholder="00000-000"/>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="logradouro">Rua:</label> 
+							<input type="text" name="logradouro" id="logradouro" class="form-control"/>
+						</div>
+						<div class="form-group col-md-1">
+							<label for="numero">Número:</label> 
+							<input type="text" name="numero" id="numero" class="form-control" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="bairro">Bairro:</label> 
+							<input type="text" name="bairro" id="bairro" class="form-control" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="cidade">Cidade:</label> 
+							<input type="text" name="cidade" id="cidade" class="form-control" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="estado">Estado:</label> 
+							<input type="text" name="uf" id="uf" class="form-control" />
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="cep.js"></script>
+</html>

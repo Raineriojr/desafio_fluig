@@ -1,9 +1,8 @@
-$('#cep').blur(function() {
-    $.getJSON('//brasilaberto.com/api/v1/zipcode/'+$('#cep').val(), function (dados) {
-        $('#logradouro').val(dados.result.street)
-        $('#bairro').val(dados.result.district)
-        $('#cidade').val(dados.result.city)
-        $('#estado').val(dados.result.stateShortname)
-        $('#numero').focus()
+$("#cep").blur(function() {
+    $.getJSON("//viacep.com.br/ws/"+ $("#cep").val() +"/json/", function(dados) {
+        $("#logradouro").val(dados.logradouro);
+        $("#bairro").val(dados.bairro);
+        $("#cidade").val(dados.localidade);
+        $("#uf").val(dados.uf);
     })
-})
+});
