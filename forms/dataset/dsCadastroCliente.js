@@ -9,16 +9,21 @@ function createDataset(fields, constraints, sortFields) {
 	  // colunas do dataset para clientes
 	    var dsCadastro = DatasetBuilder.newDataset();
 	    
-	    dsCadastro.addColumn("cliente");
-	    dsCadastro.addColumn("email");
+	    dsCadastro.addColumn("cliente");	    
 	    dsCadastro.addColumn("telefone");
-	    dsCadastro.addColumn("endereco");
+	    
+	    dsCadastro.addColumn("cep");
+	    dsCadastro.addColumn("rua");
+	    dsCadastro.addColumn("numero");
+	    dsCadastro.addColumn("bairro");
+	    dsCadastro.addColumn("cidade");
+	    dsCadastro.addColumn("uf");
 
 	    // informações dos clientes ao dataset dados
 	    
-	    dsCadastro.addRow(new Array("Rodrigo Mauricio", "rodrigomauricio@email.com", "(11) 1234-5678", "Rua A, 123"));
-	    dsCadastro.addRow(new Array("Rainério Santos", "rainerio@email.com", "(21) 9876-5432", "Avenida B, 456"));
-	    dsCadastro.addRow(new Array("Maria Ferreira", "maria@email.com", "(31) 5555-7777", "Rua C, 789"));
+	    dsCadastro.addRow(new Array("Rodrigo Mauricio", "(13) 99747-2734", "11446-560", "Rua Antônio Fagundes de Melo", 61, "Balneario Praia do Perequê", "Guarujá", "SP"));
+	    dsCadastro.addRow(new Array("Rainério Junior", "(11) 98848-2734", "11446-560", "Rua Antônio Fagundes de Melo", 61, "Balneario Praia do Perequê", "Guarujá", "SP"));
+	    dsCadastro.addRow(new Array("Kátia Santos", "(13) 99161-4785", "11446-560", "Rua Antônio Fagundes de Melo", 61, "Balneario Praia do Perequê", "Guarujá", "SP"));
 
 	    return dsCadastro;
 
