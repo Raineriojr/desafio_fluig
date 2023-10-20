@@ -22,7 +22,7 @@ $(document).ready(function(){
 	    		
 	    		var soma = 0;
 	    		selectedItems.map(function(item, index) {
-	    			soma = Number(item.preco.split(/\s/)[1]);
+	    			soma -= Number(item.preco.split(/\s/)[1]);
 	    			total = soma/selectedItems.length;
 	    			$('#valor-total').text(total.toFixed(2));
 	    		})
@@ -39,10 +39,10 @@ $(document).ready(function(){
 	    		$(this).addClass('btn-success');
 	    		$(this).text('Selecionado')
 	    		$('#P').prop('checked', true);
-	    		
+
 	    		var soma = 0;
 	    		selectedItems.map(function(item, index) {
-	    			soma = Number(item.preco.split(/\s/)[1]);
+	    			soma += Number(item.preco.split(/\s/)[1]);
 	    			total = soma/selectedItems.length;
 	    			$('#valor-total').text(total.toFixed(2));
 	    		})
@@ -68,7 +68,7 @@ $(document).ready(function(){
 			    	totalTamanho = total + 15;
 			    }
 			    if(tamanhoSelecionado == 'GG'){
-			    	totalTamanho = total + 20;
+			    	totalTamanho = total + 25;
 			    }
 			    $('#valor-total').text(totalTamanho.toFixed(2));
 		    }
