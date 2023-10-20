@@ -4,5 +4,7 @@ $("#cep").blur(function() {
         $("#bairro").val(dados.bairro);
         $("#cidade").val(dados.localidade);
         $("#uf").val(dados.uf);
+        
+        $("#numero").focus()
     })
 });
