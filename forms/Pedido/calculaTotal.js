@@ -21,16 +21,19 @@ $(document).ready(function(){
 	    		$('#P').prop('checked', true);
 	    		
 	    		var soma = 0;
-	    		selectedItems.map(function(item, index) {
-	    			soma -= Number(item.preco.split(/\s/)[1]);
+	    		const pizzaNames = selectedItems.map(function(item, index) {
+	    			soma = Number(item.preco.split(/\s/)[1]);
 	    			total = soma/selectedItems.length;
-	    			$('#valor-total').text(total.toFixed(2));
+	    			$('#valor-total').val(total.toFixed(2));
+	    			return item.pizza;
 	    		})
+	    		$('#pizza').val(pizzaNames.join(', '))
 	    		
-	    		total = Number(selectedPizza.preco.split(/\s/)[1]);
+	    		total = Number(selectedPizza.preco.split(/\s/)[1]); 
 	    		if(selectedItems.length == 0) {
 	    			total = 0;
-	    			$('#valor-total').text(total.toFixed(2));
+	    			$('#valor-total').val(total.toFixed(2));
+	    			$('#pizza').val('')
 	    		}
 	    	}
 	    	else {
@@ -41,11 +44,13 @@ $(document).ready(function(){
 	    		$('#P').prop('checked', true);
 
 	    		var soma = 0;
-	    		selectedItems.map(function(item, index) {
+	    		const pizzaNames = selectedItems.map(function(item, index) {
 	    			soma += Number(item.preco.split(/\s/)[1]);
 	    			total = soma/selectedItems.length;
-	    			$('#valor-total').text(total.toFixed(2));
+	    			$('#valor-total').val(total.toFixed(2));
+	    			return item.pizza;
 	    		})
+	    		$('#pizza').val(pizzaNames.join(', '))
 	    	}
 	    }
 	});
@@ -70,7 +75,7 @@ $(document).ready(function(){
 			    if(tamanhoSelecionado == 'GG'){
 			    	totalTamanho = total + 25;
 			    }
-			    $('#valor-total').text(totalTamanho.toFixed(2));
+			    $('#valor-total').val(totalTamanho.toFixed(2));
 		    }
 		});
 	})
