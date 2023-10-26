@@ -29,7 +29,7 @@
 	</head>
 <body>
 <div class="fluig-style-guide">
-	<form id="form" name="form" role="form">	
+	<form name="form" role="form">	
 		<div class="page-header">
 			<div class="row">
 				<div class="col-md-12 col-xs-12 containerH1">
@@ -41,155 +41,174 @@
 			</div>
 		</div>
 		
-		<!-- INICIO BUSCA POR ZOOM -->
-		
-		<div class="panel panel-default">		
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					<img src="img/cliente.png" class="fluigicon" style="width: 30px;" alt="iCliente" />
-					 Informações do Cliente
-				</h3>
-			</div>
-			
+	<!-- INICIO BUSCA POR ZOOM -->
 
-			<div class="panel-body">
-				<div class="row">
-					<div class="form-group col-md-4">
-						<label for="name">Nome: </label> 
-						<input
-							type="zoom"
-							   id="cadastroCliente"
-							   name="cadastroCliente"
-							   data-zoom="{
-							       'displayKey':'nome',
-							       'datasetId':'dsCadastroCliente',
-							       'placeholder':'Clientes Cadastrados',
-							       'fields':[
-							           {
-							               'field':'nome',
-							               'label':'Nome'
-							           },{
-							               'field':'logradouro',
-							               'label':'Rua',
-							                'standard':'true'
-							            },{
-							                'field':'telefone',
-							                'label':'Telefone'
-							            }
-							        
-							        ]
-							    }"			
-						/>
-					</div>
-					<div class="form-group col-md-4">
-						<label for="name">Endereço: </label> 
-						<input
-							type="zoom"
-							   id="endereco"
-							   name="endereco"
-							   data-zoom="{
-							       'displayKey':'logradouro',
-							       'datasetId':'dsCadastroCliente',
-							       'placeholder':'Endereço do cliente',
-							       'fields':[
-							           {
-							               'field':'nome',
-							               'label':'Nome'
-							           },{
-							               'field':'logradouro',
-							               'label':'Rua',
-							                'standard':'true'
-							            },{
-							                'field':'telefone',
-							                'label':'Telefone'
-							            }
-							        
-							        ]
-							    }"			
-						/>
-					</div>
-					<div class="form-group col-md-4">
-						<label for="name">Telefone: </label> 
-						<input
-							type="zoom"
-							   id="telefone"
-							   name="telefone"
-							   data-zoom="{
-							       'displayKey':'telefone',
-							       'datasetId':'dsCadastroCliente',
-							       'placeholder':'Telefone do cliente',
-							       'fields':[
-							           {
-							               'field':'nome',
-							               'label':'Nome'
-							           },{
-							               'field':'logradouro',
-							               'label':'Rua',
-							                'standard':'true'
-							            },{
-							                'field':'telefone',
-							                'label':'Telefone'
-							            }
-							        
-							        ]
-							    }"			
-						/>
-				</div>
-			</div>				
-		</div>
+<div class="panel panel-default">		
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <img src="img/cliente.png" class="fluigicon" style="width: 30px;" alt="iCliente" />
+             Informações do Cliente
+        </h3>
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="name">Nome: </label> 
+                <input
+                    type="zoom"
+                    id="cadastroCliente"
+                    name="cadastroCliente"
+                    data-zoom="{
+                        'displayKey':'nome',
+                        'datasetId':'dsCadastroCliente',
+                        'placeholder':'Clientes Cadastrados',
+                        'fields':[
+                            {
+                                'field':'nome',
+                                'label':'Nome'
+                            },{
+                                'field':'logradouro',
+                                'label':'Rua',
+                                'standard':'true'
+                            },{
+                                'field':'telefone',
+                                'label':'Telefone'
+                            }
+                        
+                        ]
+                    }"			
+                />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="name">Endereço: </label> 
+                <input
+                    type="zoom"
+                    id="endereco"
+                    name="endereco"
+                    data-zoom="{
+                        'displayKey':'logradouro',
+                        'datasetId':'dsCadastroCliente',
+                        'placeholder':'Endereço do cliente',
+                        'fields':[
+                            {
+                                'field':'nome',
+                                'label':'Nome'
+                            },{
+                                'field':'logradouro',
+                                'label':'Rua',
+                                'standard':'true'
+                            },{
+                                'field':'telefone',
+                                'label':'Telefone'
+                            }
+                        
+                        ]
+                    }"			
+                />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="name">Telefone: </label> 
+                <input
+                    type="zoom"
+                    id="telefone"
+                    name="telefone"
+                    data-zoom="{
+                        'displayKey':'telefone',
+                        'datasetId':'dsCadastroCliente',
+                        'placeholder':'Telefone do cliente',
+                        'fields':[
+                            {
+                                'field':'nome',
+                                'label':'Nome'
+                            },{
+                                'field':'logradouro',
+                                'label':'Rua',
+                                'standard':'true'
+                            },{
+                                'field':'telefone',
+                                'label':'Telefone'
+                            }
+                        
+                        ]
+                    }"			
+                />                
+                
+            </div>
+            
+            <div>
+               	<button id="cadastrarNovo" class="btn btn-warning" style="margin-top: 15px; margin-left: 15px;">Cadastrar Novo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<!-- INICIO - ESCOLA DE PIZZA -->
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <img src="img/pizza_escolher.png" class="fluigicon" style="width: 30px;" alt="pizza" />
+            Pizzas:
+        </h3><br>
+        <p><strong>Pizza Broto (P)</strong> - R$ 25,00</p>
+        <p><strong>Pizza Média (M)</strong> - (P) + R$ 10,00 | <b>Pizza Grande (G)</b> - (P) + R$ 15,00 | <b>Pizza Família (GG)</b> - (P) + R$ 25,00</p>
+    </div>
+
+    <div class="panel-body">
+        <div class="row">
+            <table id="table" class="table">
+                <thead>
+                    <tr>
+                        <th><b>Pizza</b></th>
+                        <th><b>Descrição</b></th>
+                        <th><b>Preço | Tamanho P</b></th>
+                        <th><b>Escolha</b></th>
+                    </tr>
+                </thead>
+                <tbody id="dataset-table-body"></tbody>
+            </table>
+        </div>
+
+        <hr>
+        
 		
-		<!-- INICIO - ESCOLA DE PIZZA -->
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					<img src="img/pizza_escolher.png" class="fluigicon" style="width: 30px;" alt="pizza" />
-					 Pizzas: 
-				</h3><br>
-				<p><b>Pizza Broto (P)</b> - R$ 25,00</p>
-				<p><b>Pizza Média (M)</b> - (P) + R$ 10,00 | <b>Pizza Grande (G)</b> - (P) + R$ 15,00 | <b>Pizza Família (GG)</b> - (P) + R$ 25,00</p>
-			</div>
+        <div class="row">
+        
+        	<!--Inicio - Número do pedido -->
+            <div class="form-group col-md-2">
+                <label for="pedido">Número do Pedido:</label>
+                <input type="text" class="form-control" name="pedido" id="numero-pedido" />
+            </div>
+            <!--fim - Número do pedido -->
+            
+            <div class="form-group col-md-4">
+                <label for="pizza">Pizza:</label>
+                <input readonly type="text" class="form-control" name="pizza" id="pizza" />
+            </div>
+            <div class="form-group col-md-4">
+                <label>Tamanho</label>
+                <div class="radio">
+                    <label class="fs-md-margin-right"><input id="P" checked="checked" type="radio" name="tamanho" value="P">P</label>
+                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="M">M</label>
+                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="G">G</label>
+                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="GG">GG</label>
+                </div>
+            </div>
+            
+            <div class="form-group col-md-2">
+	            <label for="total">Total:</label>
+	            <input readonly type="text" class="form-control" name="total" id="valor-total" />
+	        </div>
+        </div>
+
+        
+    </div>
+</div>
+
 		
-			<div class="panel-body">
-				<div class="row">
-					<table id="table" class="table">
-					   <thead>
-					   	<tr>
-						   	<th>Pizza</th>
-						   	<th>Descrição</th>
-						   	<th>Preço | Tamanho P</th>
-						   	<th>Escolha</th>
-					   	</tr>
-					   </thead>
-					   <tbody id="dataset-table-body"></tbody>
-					</table>
-				</div>	
+		<!-- INICIO - FORMA DE PAGAMENTO -->		
 			
-				<hr> 
-			
-				<div class="row mt-3">
-					<div class="form-group col-md-4">
-						<label for="pizza">Pizza:</label>
-						<input readonly type="text" class="form-control" name="pizza" id="pizza" /> 
-					</div>
-			        <div class="form-group col-md-4">
-		                <label>Tamanho</label>
-		                <div class="radio">
-		                    <label class="fs-md-margin-right"><input id="P" checked="checked" type="radio" name="tamanho" value="P">P</label> 
-		                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="M">M</label>
-		                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="G">G</label>
-		                    <label class="fs-md-margin-right"><input type="radio" name="tamanho" value="GG">GG</label>
-		                </div>                        
-			        </div>
-	
-			        <div class="form-group col-md-4">
-						<label for="total">Total:</label>
-						<input readonly type="text" class="form-control" name="total" id="valor-total" /> 
-					</div>
-			  </div>
-			</div>	
-		</div>
-		
-		<!-- INICIO - FORMA DE PAGAMENTO -->
 		 <div class="panel panel-default">
 		    <div class="panel-heading">
 				<h3 class="panel-title">
@@ -207,18 +226,46 @@
 				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="dinheiro">Dinheiro</label>
 				    		<label><input type="radio" name="formaDePagamento" id="formaDePagamento" value="pix">PIX</label>    			
 				    	</div>
-			    	</div>						
+			    	</div>
+		    	
+			    	<div class="form-group col-md-4">
+			    		<label for="confirmacaoMotoboy">Pagamento Confirmado</label>
+			    		<div class="radio">
+				    		<label><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="confirmado">Confirmado</label>
+				    		<label><input type="radio" name="confirmacaoMotoboy" id="confirmacaoMotoboy" value="naoConfirmado">Não confirmado</label>
+			    		</div>
+			  	 	</div>
+			  	 	
+			  	 	<div class="form-group col-md-4">
+			  	 		<div class="panel-body">
+				  	 		<label for="motoBoy">
+				  	 			<h3 class="panel-title">
+									<img src="img/entrega-rapida.png" class="fluigicon" style="width: 30px;" alt="iCliente" />
+									 Motoboy
+								</h3>
+				  	 		</label>		
+							<select name="motoBoy" id="motoBoy" class="form-control" dataset="dsMotoboy" datasetkey="nome" datasetvalue="nome" ></select>	
+						</div>
+					</div>
+					
 				</div>
 			  	 	
 	  		</div>
-    	</div>
+    	</div>  
+    
     <!-- FIM - FORMA DE PAGAMENTO -->	
+    
+  
 	</form>
 </div>
-<script type="text/javascript" src="consultaCliente.js"></script>
-<script type="text/javascript" src="table.js"></script>
-<script type="text/javascript" src="calculaTotal.js"></script>
-<script type="text/javascript" src="hideTable.js"></script>
+<script type="text/javascript" src="./js/hideTable.js"></script>
+<script type="text/javascript" src="./js/funcaoZoom.js"></script>
+<script type="text/javascript" src="./js/consultaCliente.js"></script>
+<script type="text/javascript" src="./js/table.js"></script>
+<script type="text/javascript" src="./js/calculaTotal.js"></script>
+<script type="text/javascript" src="./js/numeroPedido.js"></script>
+<scritp type="text/javascript" src="./js/botaoCadastro.js"></scritp>
+	
 </body>
 
 </html>
